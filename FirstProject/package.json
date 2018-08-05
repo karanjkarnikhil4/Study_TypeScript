@@ -1,0 +1,24 @@
+{
+  "name": "firstproject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.4.0"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:karanjkarnikhil4/Study_TypeScript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/karanjkarnikhil4/TypeScript_Study/issues"
+  },
+  "homepage": "https://github.com/karanjkarnikhil4/TypeScript_Study#readme",
+  "description": ""
+}
