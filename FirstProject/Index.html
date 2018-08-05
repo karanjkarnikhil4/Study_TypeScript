@@ -6,7 +6,23 @@
 </head>
 <body>
 <h1>Hello World i am nikhil karanjkar</h1>
-<script src="NameSpaces/Namespaces.js"></script>
+
+<script src="./node_modules/systemjs/dist/system.js"></script> <!-- here we are using system.js as a start script-->
+<script>
+    SystemJS.config(                                            <!-- configuration for the specifying that importing files are going to be of default .js extenstion hence we dont need to specify the extension in each and every import like in Main.ts-->
+        {
+            baseURL: '/',
+            packages:
+                {
+                    '/': {defaultExtension:'js'}
+                }
+        });
+
+    SystemJS.import('./Modules/Main.js');   <!-- here we need to specify our main file -->
+</script>
+
+<!--<script src="Modules/Main.js"></script>-->
+<!--<script src="NameSpaces/Namespaces.js.js"></script> -->
 <!--<script src="NameSpaces/Rectangle.js"></script> // Need to add these if the namespaces are in different files and if their nammespaces are not imported using reference tags-->
 <!--<script src="NameSpaces/Circle.js"></script>   // Need to add these if the namespaces are in different files and if their nammespaces are not imported using reference tags-->
 </body>
