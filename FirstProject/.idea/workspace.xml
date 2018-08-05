@@ -17,8 +17,8 @@
       <file leaf-file-name="Index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="384">
+              <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
               <folding>
                 <element signature="e#286#551#0" />
                 <element signature="e#552#710#0" />
@@ -40,19 +40,10 @@
         <entry file="file://$PROJECT_DIR$/script.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-833">
-              <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
+              <caret line="131" selection-start-line="131" selection-end-line="131" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RectangleModule.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Modules/RectangleModule.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="8" column="46" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -84,6 +75,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="NameSpace.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NameSpace.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Interface.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Interfaces/Interface.ts">
           <provider selected="true" editor-type-id="text-editor">
@@ -96,8 +99,8 @@
       <file leaf-file-name="Generic.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Generics/Generic.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="135" selection-start-line="11" selection-start-column="135" selection-end-line="11" selection-end-column="135" />
+            <state relative-caret-position="221">
+              <caret line="119" column="65" selection-start-line="119" selection-start-column="65" selection-end-line="119" selection-end-column="65" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -165,8 +168,8 @@
         <option value="$PROJECT_DIR$/Modules/Main.ts" />
         <option value="$PROJECT_DIR$/Interfaces/Index.html" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/Index.html" />
         <option value="$PROJECT_DIR$/Interfaces/Interface.ts" />
+        <option value="$PROJECT_DIR$/Index.html" />
         <option value="$PROJECT_DIR$/Generics/Generic.ts" />
       </list>
     </option>
@@ -274,12 +277,12 @@
       <workItem from="1533377278330" duration="12714000" />
       <workItem from="1533434985496" duration="2906000" />
       <workItem from="1533438635986" duration="1146000" />
-      <workItem from="1533446222450" duration="17334000" />
+      <workItem from="1533446222450" duration="22328000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89745000" />
+    <option name="totallyTimeSpent" value="94739000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -295,14 +298,14 @@
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="7" weight="0.3297062" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12908325" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12908325" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3297062" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50052685" side_tool="true" visible="true" weight="0.3264418" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3297062" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.31991294" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49947312" visible="true" weight="0.3264418" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -347,6 +350,7 @@
         <option value="$PROJECT_DIR$/Modules/Main.js" />
         <option value="$PROJECT_DIR$/Modules/RectangleModule.js" />
         <option value="$PROJECT_DIR$/Interfaces/Interface.js" />
+        <option value="$PROJECT_DIR$/Generics/Generic.js" />
       </list>
     </option>
   </component>
@@ -606,16 +610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NameSpace.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Modules/RectangleModule.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -658,17 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-          <folding>
-            <element signature="e#286#551#0" />
-            <element signature="e#552#710#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NameSpaces/Namespaces.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -679,7 +662,7 @@
     <entry file="file://$PROJECT_DIR$/script.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-833">
-          <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
+          <caret line="131" selection-start-line="131" selection-end-line="131" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -693,10 +676,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/NameSpace.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
+          <folding>
+            <element signature="e#286#551#0" />
+            <element signature="e#552#710#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Generics/Generic.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="135" selection-start-line="11" selection-start-column="135" selection-end-line="11" selection-end-column="135" />
+        <state relative-caret-position="221">
+          <caret line="119" column="65" selection-start-line="119" selection-start-column="65" selection-end-line="119" selection-end-column="65" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
