@@ -131,6 +131,7 @@ ChangeName({name:"nikhil",age:28 ,address:"Pune",surname:"Karanjkar",postcode:45
 */
 
 //-------------------------------------------------------------------------------------------------------------------------------------
+/*
 interface NamedPerson
 {
     name:string;
@@ -166,3 +167,87 @@ const Person_2=
     greetPerson(Person_2) ; // this will  work as the Person_2  contains the greet method
 
 Person_2.greet('Anything');
+*/
+//-------------------------------------------------------------------------------------------------------------------------------------
+/*
+// Classes implementing interfaces
+
+interface NamedPerson
+{
+    name:string;
+    age?:number;
+    [propname:string]:any;
+    greet(lastName:string):void;
+}
+
+function greetPerson (person:NamedPerson)
+{
+    console.log(`hello ${person.name}`);
+}
+
+class Personi implements NamedPerson {  // class should implement all the mandatory properties from the interface
+    name: string;
+    lastName:string // the class can have its own properties
+    greet(lastName: string): void {
+        console.log(`Hello ${lastName}`);
+    }
+
+}
+
+const personi_1=new Personi()
+personi_1.name="Nikhil";
+greetPerson(personi_1);
+personi_1.greet("karanjkar");
+
+*/
+//-------------------------------------------------------------------------------------------------------------------------------------
+//Defining Function Types using Interfaces
+/*
+interface DoubleValuedFunction
+{
+    (value1:number,value2:number):number
+}
+
+let functionPointer:DoubleValuedFunction;
+
+functionPointer=function(value1,value2)
+{
+    return value1*value2;
+}
+*/
+
+//-------------------------------------------------------------------------------------------------------------------------------------
+////Interface Inheritance
+
+/*
+interface NamedPerson
+{
+    name:string;
+    age?:number; // age is optional
+    [propname:string]:any; // this is flexible
+    greet(lastName:string):void;
+}
+
+interface AgedPerson implements NamedPerson
+{
+    age:number; // age here is now mandatory
+}
+
+let MinePerson:NamedPerson =
+    {
+        name:"Nikhil",
+        age: 28,
+        greet(lastName)
+        {
+            console.log('Hello' +lastName);
+        }
+    }
+
+    console.log(MinePerson); // Here you can see that MinePerson needs to implement the properties, functions of both the interfaces
+
+*/
+//
+// //-------------------------------------------------------------------------------------------------------------------------------------
+//Interfaces does not compile into javascript, they are left out in the javascript code.
+// Interfaces are used in typescript just to check the type compliance and they are ignored later while transpiling into js
+
