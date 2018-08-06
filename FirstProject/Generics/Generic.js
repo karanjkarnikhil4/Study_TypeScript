@@ -98,23 +98,30 @@ console.log(myclass.Calculate());
 */
 //-------------------------------------------------------------------------------------------------------------------------------------
 //Now lets add generic types to the class
-var SimpleGenericClass = /** @class */ (function () {
-    function SimpleGenericClass() {
-    }
-    SimpleGenericClass.prototype.Calculate = function () {
-        // return this.firstNumber*this.secondNumber; this gives complile error saying  The left-hand side of an arithmetic operation must be of type 'any', 'number' or an enum type.
+/*
+class SimpleGenericClass<T>
+{
+    firstNumber:T;
+    secondNumber:T;
+
+    Calculate()
+    {
+       // return this.firstNumber*this.secondNumber; this gives complile error saying  The left-hand side of an arithmetic operation must be of type 'any', 'number' or an enum type.
         return +this.firstNumber * +this.secondNumber; //we had to use + sign in front of the variable to remove the above error // Now it works
-    };
-    return SimpleGenericClass;
-}());
-var myclass1 = new SimpleGenericClass();
-myclass1.firstNumber = 10;
+    }
+}
+let myclass1=new SimpleGenericClass<number>();
+myclass1.firstNumber=10;
 //myclass1.secondNumber="30"; // this is not  possible as the type is specifed
-var myclass2 = new SimpleGenericClass();
-myclass2.firstNumber = 10;
+
+let myclass2=new SimpleGenericClass();
+myclass2.firstNumber=10;
 //myclass2.secondNumber="30";
-myclass2.secondNumber = true; // this is  possible , let us look how we can solve this problem using contraints
-console.log(myclass2.Calculate());
+myclass2.secondNumber=true; // this is  possible , let us look how we can solve this problem using contraints
+
+
+console.log(myclass2.Calculate())
+*/
 //-------------------------------------------------------------------------------------------------------------------------------------
 //Using Constraints
 /*
@@ -134,4 +141,96 @@ genericClass.number1="30";
 //genericClass.number2=true; this is not possible as the type should be either string or number as specified above
 
 console.log(genericClass.Calculate());
-*/ 
+*/
+//-------------------------------------------------------------------------------------------------------------------------------------
+//Using Constraints
+/*
+class GenericClass<T extends number|string> // here we are specifying that the type can be either number or string
+{
+    number1:T
+    number2:T
+    Calculate()
+    {
+        return +this.number1 * +this.number2;
+    }
+}
+
+let genericClass=new GenericClass<number>()
+genericClass.number1=10;
+//genericClass.number1="30"; now this is not possible as we have explicitly defined the type here
+//genericClass.number2=true; this is not possible as the type should be either string or number as specified above
+
+console.log(genericClass.Calculate());
+
+*/
+//-------------------------------------------------------------------------------------------------------------------------------------
+//Using more than one generic type
+/*
+class GenericClass<T extends string |number,U extends number |string> // here we have specified that T can be either number or string  also U can be number or string independently.
+{
+    number1:T;
+    number2:U;
+
+    Calculate()
+    {
+        return +this.number1 * +this.number2;
+    }
+}
+
+let myClass = new GenericClass<number,string>()
+
+myClass.number1 =20;
+myClass.number2 ="40"; // this is now possible as we have 2 different types.
+
+*/
+//-----------------------------------------------------------------------------------------------------------------------------------------
+/*
+class GenericClass<T extends U,U extends number |string> // here we have specified that T extends U which means if U is number T should also be a number
+{
+    number1:T;
+    number2:U;
+
+    Calculate()
+    {
+        return +this.number1 * +this.number2;
+    }
+}
+
+let myClass = new GenericClass<string,string>()
+
+//myClass.number1 =20; // this is not possible as T extends U. it means if U is string, T should also be string
+myClass.number2 ="40"; //
+myClass.number1 = "50";
+
+*/
+//-----------------------------------------------------------------------------------------------------------------------------------------
+//Create a generic Map (an Object like an Array, but instead with Key-Value Pairs). The key will always be a string.
+var MyMap = /** @class */ (function () {
+    function MyMap() {
+        this.map = {}; // this is not an array, this is same as interface property which is flexible to accept any values which are not know before hand.
+    }
+    MyMap.prototype.getItem = function (key) {
+        return this.map[key];
+    };
+    MyMap.prototype.setItem = function (key, item) {
+        this.map[key] = item;
+    };
+    MyMap.prototype.clear = function () {
+        this.map = {};
+    };
+    MyMap.prototype.printAll = function () {
+        for (var key in this.map) {
+            console.log(key + ":" + this.map[key]);
+        }
+    };
+    return MyMap;
+}());
+var myMap = new MyMap();
+myMap.setItem("firstNumber", 10);
+myMap.setItem("secondNumber", 20);
+console.log(myMap.getItem("firstNumber"));
+console.log(myMap.getItem("secondNumber"));
+myMap.printAll();
+myMap.clear();
+myMap.printAll();
+//-----------------------------------------------------------------------------------------------------------------------------------------

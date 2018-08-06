@@ -18,15 +18,32 @@ console.log(CalculateCircumference(20))
 console.log(CalculateRectangleArea(20, 40))
 */
 //-------------------------------------------------------------------------------------------------------------------------------------
-
+/*
 // importing using * and default importing
 import * as Circle  from './CircleModule'  // here we are importing everything from Circle module and using the alias Circle
 import Rectangle from './RectangleModule' // here we can specify any name like Rectangle as the default one will be exported here
 
+
+
 console.log(Circle.CalculateCircumference(20))
 console.log(Rectangle(20, 40)) // here we use the alias directly to call the function as the default one will be exported here
 console.log(Circle.PI);
+*/
 
 // Also look at NameSpaces_VS_Modules.PNG in this folder for all the differences between Modules and Namespaces
+//-------------------------------------------------------------------------------------------------------------------------------------
 
+//we cannot have the functions with same names here that is CalculateCircumference, there will be a conflict  and it will not compile
+/*
+import {CalculateCircumference}  from './CircleModule'  //
+import Rectangle from './RectangleModule' // here we can specify any name like Rectangle as the default one will be exported here
+
+/*function CalculateCircumference(diameter:number)  this is not possible it will throw complile error
+{
+    return 100;
+}*/
+/*
+console.log(CalculateCircumference(20))
+console.log(Rectangle(20, 40)) // here we use the alias directly to call the function as the default one will be exported here
+*/
 

@@ -98,7 +98,7 @@ console.log(myclass.Calculate());
 */
 //-------------------------------------------------------------------------------------------------------------------------------------
 //Now lets add generic types to the class
-
+/*
 class SimpleGenericClass<T>
 {
     firstNumber:T;
@@ -121,7 +121,7 @@ myclass2.secondNumber=true; // this is  possible , let us look how we can solve 
 
 
 console.log(myclass2.Calculate())
-
+*/
 //-------------------------------------------------------------------------------------------------------------------------------------
 //Using Constraints
 /*
@@ -142,3 +142,106 @@ genericClass.number1="30";
 
 console.log(genericClass.Calculate());
 */
+//-------------------------------------------------------------------------------------------------------------------------------------
+
+//Using Constraints
+/*
+class GenericClass<T extends number|string> // here we are specifying that the type can be either number or string
+{
+    number1:T
+    number2:T
+    Calculate()
+    {
+        return +this.number1 * +this.number2;
+    }
+}
+
+let genericClass=new GenericClass<number>()
+genericClass.number1=10;
+//genericClass.number1="30"; now this is not possible as we have explicitly defined the type here
+//genericClass.number2=true; this is not possible as the type should be either string or number as specified above
+
+console.log(genericClass.Calculate());
+
+*/
+//-------------------------------------------------------------------------------------------------------------------------------------
+
+//Using more than one generic type
+/*
+class GenericClass<T extends string |number,U extends number |string> // here we have specified that T can be either number or string  also U can be number or string independently.
+{
+    number1:T;
+    number2:U;
+
+    Calculate()
+    {
+        return +this.number1 * +this.number2;
+    }
+}
+
+let myClass = new GenericClass<number,string>()
+
+myClass.number1 =20;
+myClass.number2 ="40"; // this is now possible as we have 2 different types.
+
+*/
+//-----------------------------------------------------------------------------------------------------------------------------------------
+/*
+class GenericClass<T extends U,U extends number |string> // here we have specified that T extends U which means if U is number T should also be a number
+{
+    number1:T;
+    number2:U;
+
+    Calculate()
+    {
+        return +this.number1 * +this.number2;
+    }
+}
+
+let myClass = new GenericClass<string,string>()
+
+//myClass.number1 =20; // this is not possible as T extends U. it means if U is string, T should also be string
+myClass.number2 ="40"; //
+myClass.number1 = "50";
+
+*/
+//-----------------------------------------------------------------------------------------------------------------------------------------
+//Create a generic Map (an Object like an Array, but instead with Key-Value Pairs). The key will always be a string.
+
+/*
+class MyMap<T extends number|string> {
+    private map: { [key: string]: T } = {}; // this is not an array, this is same as interface property which is flexible to accept any values which are not known before hand. and here it is inside the object, this is the key to map here
+
+    getItem(key: string) {
+        return this.map[key];
+    }
+
+    setItem(key: string, item: T) {
+        this.map[key] = item;
+    }
+
+    clear() {
+        this.map = {}
+    }
+
+    printAll() {
+        for(let key in this.map) {
+            console.log(key + ":" + this.map[key]);
+        }
+    }
+}
+
+let myMap =new MyMap<number>();
+
+myMap.setItem("firstNumber",10);
+myMap.setItem("secondNumber",20);
+
+console.log(myMap.getItem("firstNumber"));
+console.log(myMap.getItem("secondNumber"));
+
+
+myMap.printAll();
+myMap.clear();
+myMap.printAll();
+*/
+//-----------------------------------------------------------------------------------------------------------------------------------------
